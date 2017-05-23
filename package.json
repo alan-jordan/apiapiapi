@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/alan-jordan/apiapiapi#readme",
   "dependencies": {
-    "ava": "^0.19.1",
     "superagent": "^3.5.2"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "nock": "^9.0.13"
   }
 }

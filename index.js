@@ -1,19 +1,18 @@
 var request = require('superagent')
 var url = 'https://igdbcom-internet-game-database-v1.p.mashape.com'
 
-function getGames(callback, searchStr) {
+function getGames(callback) {
   request
-    .get(`${url}/games/?fields=name&limit=10&offset=0&order=release_dates.date%3Adesc&search=${searchStr}`)
+    .get(`${url}/games/?fields=name&limit=10&offset=0&order=release_dates.date%3Adesc&search=mario`)
     .set('X-Mashape-Key', '8XrLHLkRxlmshascF7n3mXc7CtoVp1RQN3Yjsn4ISq8ddFmTDT')
     .set('Accept', 'application/json')
     .end(function(err, res) {
       if(err || !res.ok) {
-        alert('Oh no error!')
+        callback('Oh no error!' + err)
     } else {
-     callback(res.body)
-     callback(res.ok)
+     callback(null, res.body)
     }
   })
 }
-
-getGames(console.log, 'halo')
+getGames(console.log)
+module.exports = getGames
