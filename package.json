@@ -1,0 +1,23 @@
+{
+  "name": "apiapiapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava -v tests/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alan-jordan/apiapiapi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alan-jordan/apiapiapi/issues"
+  },
+  "homepage": "https://github.com/alan-jordan/apiapiapi#readme",
+  "dependencies": {
+    "ava": "^0.19.1",
+    "superagent": "^3.5.2"
+  }
+}
