@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ava -v tests/**/*.test.js"
+    "test": "ava -v --serial tests/**/*.test.js"
   },
   "repository": {
     "type": "git",

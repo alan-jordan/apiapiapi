@@ -7,12 +7,12 @@ function getGames(callback) {
     .set('X-Mashape-Key', '8XrLHLkRxlmshascF7n3mXc7CtoVp1RQN3Yjsn4ISq8ddFmTDT')
     .set('Accept', 'application/json')
     .end(function(err, res) {
-      if(err || !res.ok) {
+      if(err) {
         callback('Oh no error!' + err)
     } else {
      callback(null, res.body)
     }
   })
 }
-getGames(console.log)
+
 module.exports = getGames
